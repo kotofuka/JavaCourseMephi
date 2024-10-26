@@ -26,7 +26,7 @@ public class Student {
     }
 
     public boolean tryUpgradeCourse (){
-        if (Arrays.stream(this.marks).sum() / this.marks.length >= 3){
+        if (Arrays.stream(this.marks).sum() / this.marks.length >= MIN_SCORE){
             this.course++;
             return true;
         }
