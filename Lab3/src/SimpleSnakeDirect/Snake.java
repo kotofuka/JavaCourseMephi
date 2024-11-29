@@ -7,6 +7,8 @@ public class Snake {
     final Color HEAD_COLOR = Config.SNAKE_HEAD_COLOR;
     final Color BODY_COLOR = Config.SNAKE_BODY_COLOR;
 
+    final int COUNT_CELL = Config.COUNT_CELL;
+
     final int LEFT = Config.LEFT;
     final int UP = Config.UP;
     final int RIGHT = Config.RIGHT;
@@ -26,10 +28,6 @@ public class Snake {
     }
 
     public void move(){
-        for (var elem: snake){
-            System.out.println(elem.getColumn() + " " + elem.getRaw() + " " + elem.getTempColor());
-        }
-        System.out.println();
         switch (direction){
             case LEFT:
                 shiftSnake(getHead().getColumn() - 1, getHead().getRaw());
@@ -46,7 +44,6 @@ public class Snake {
             case DOWN:
                 shiftSnake(getHead().getColumn(), getHead().getRaw() + 1);
                 break;
-
 
         }
     }
@@ -101,25 +98,17 @@ public class Snake {
 
     public void reset(){
         removeSnakeBodyElements();
-        prevX = Config.COUNT_CELL / 2;
-        prevY = Config.COUNT_CELL / 2;
+        prevX = COUNT_CELL / 2;
+        prevY = COUNT_CELL / 2;
         this.snake.getFirst().setPosition(prevX, prevY);
-        prevDirection = UP;
         setDirection(UP);
-        System.out.println(this.getHead().getColumn() + " " + this.getHead().getRaw() + " " + this.getHead().getTempColor());
+        setDirection(UP);
+        //System.out.println(this.getHead().getColumn() + " " + this.getHead().getRaw() + " " + this.getHead().getTempColor());
     }
 
     private void removeSnakeBodyElements(){
         while (this.snake.size() != 1){
             this.snake.removeLast();
         }
-    }
-
-    public int getDirection(){
-        return this.direction;
-    }
-
-    public int getPrevDirection(){
-        return this.prevDirection;
     }
 }

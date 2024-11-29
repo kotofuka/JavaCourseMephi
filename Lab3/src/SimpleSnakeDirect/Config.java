@@ -5,12 +5,14 @@ import java.util.LinkedList;
 
 public record Config() {
     static final String TITLE_OF_WINDOW = "The game Snake";
-    static final int SHOW_DEALAY = 250;
+    static final int SHOW_DEALAY = 200;
 
     static final int LEFT = 37;
     static final int UP = 38;
     static final int RIGHT = 39;
     static final int DOWN = 40;
+    static final int RESET = 82;
+
 
     static final int START_LOCATION = 200;
 
@@ -31,5 +33,5 @@ public record Config() {
     static final Color ACTION_PANEL_COLOR = Color.getHSBColor(0.5333f, 0.54245f, 0.83137f);
 
     static final int WINDOW_WIDTH = CELL_WIDTH * COUNT_CELL + 6 * ACTION_PANEL_BORDER_THICKNESS;
-    static final int WINDOW_HEIGHT = CELL_HEIGHT * (COUNT_CELL + 3) + 7 * ACTION_PANEL_BORDER_THICKNESS;
+    static final int WINDOW_HEIGHT = CELL_HEIGHT * (COUNT_CELL + 3) + 3 * ACTION_PANEL_BORDER_THICKNESS;
 }

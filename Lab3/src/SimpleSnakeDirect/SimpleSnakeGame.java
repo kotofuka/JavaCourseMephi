@@ -2,19 +2,22 @@ package SimpleSnakeDirect;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 import java.util.Random;
 
 public class SimpleSnakeGame {
     JFrame frame;
     Canvas canvas;
     int score = 0;
-    JButton resetButton = new JButton("Reset");
     JLabel scoreLabel = new JLabel("Score: " + score);
     boolean isGameOver = false;
+    boolean isReset = false;
+    int[] codeContainer = new int[]{Config.LEFT, Config.UP, Config.RIGHT, Config.DOWN};
+    final int RESET = Config.RESET;
+    final int COUNT_CELL = Config.COUNT_CELL;
+
 
     Field field = new Field();
     Snake snake = new Snake();
@@ -35,22 +38,6 @@ public class SimpleSnakeGame {
         var actionPanel = new JPanel();
         actionPanel.setBorder(BorderFactory.createLineBorder(Config.ACTION_PANEL_BORDER_COLOR, Config.ACTION_PANEL_BORDER_THICKNESS));
 
-        resetButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // need to fix
-                score = 0;
-                scoreLabel.setText("Score: " + score);
-
-                isGameOver = false;
-                snake.reset();
-
-
-
-            }
-        });
-
-        actionPanel.add(resetButton, BorderLayout.NORTH);
         actionPanel.add(scoreLabel, BorderLayout.NORTH);
 
         actionPanel.setSize(Config.CELL_WIDTH, Config.CELL_HEIGHT);
@@ -69,7 +56,12 @@ public class SimpleSnakeGame {
         frame.addKeyListener(new KeyAdapter() {
 
             public void keyPressed(KeyEvent e) {
-                snake.setDirection(e.getKeyCode());
+                if (Arrays.stream(codeContainer).anyMatch(x -> x == e.getKeyCode())) snake.setDirection(e.getKeyCode());
+                else if (e.getKeyCode() == RESET) {
+//                    System.out.println("event reset");
+                    isReset = true;
+                    isGameOver = true;
+                }
             }
 
         });
@@ -81,27 +73,31 @@ public class SimpleSnakeGame {
     }
 
     private void go(){
-        score = 0;
-        snake.reset();
-        isGameOver = false;
         respawnFood();
-        while (!isGameOver){
-            canvas.repaint();
-            snake.move();
-            System.out.println("cycle");
-            if (food.isEaten(snake.getHead())) {
-                levelUp();
-            } else if (checkLose() || Math.abs(snake.prevDirection - snake.direction) == 2) {
-                isGameOver = true;
-                scoreLabel.setText("Game over");
-            }
+        while (true){
+            while (!isGameOver){
+                canvas.repaint();
+                snake.move();
+                if (food.isEaten(snake.getHead())) {
+                    levelUp();
+                } else if (checkLose() || Math.abs(snake.prevDirection - snake.direction) == 2) {
+                    isGameOver = true;
+                    scoreLabel.setText("Game over. Press \"R\" to restart.");
+                }
 
-            try {
-                Thread.sleep(Config.SHOW_DEALAY);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+                try {
+                    Thread.sleep(Config.SHOW_DEALAY);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
 
+            }
+            System.out.println();
+            if (isReset){
+                reset();
+
+            }
+            System.out.flush();
         }
     }
 
@@ -115,8 +111,8 @@ public class SimpleSnakeGame {
         var bodySnake = snake.getSnake();
         var headSnake = snake.getHead();
 
-        if (headSnake.getRaw() == 0 || headSnake.getRaw() == Config.COUNT_CELL - 1 ||
-            headSnake.getColumn() == 0 || headSnake.getColumn() == Config.COUNT_CELL - 1){
+        if (headSnake.getRaw() == 0 || headSnake.getRaw() == COUNT_CELL - 1 ||
+            headSnake.getColumn() == 0 || headSnake.getColumn() == COUNT_CELL - 1){
             return true;
         }
 
@@ -131,15 +127,24 @@ public class SimpleSnakeGame {
     }
 
     void respawnFood(){
-        int x = random.nextInt(1, Config.COUNT_CELL - 1), y = random.nextInt(1, Config.COUNT_CELL - 1);
+        int x = random.nextInt(1, COUNT_CELL - 1), y = random.nextInt(1, COUNT_CELL - 1);
         while(snake.isFoodInside(x, y)){
-            x = random.nextInt(1, Config.COUNT_CELL - 1);
-            y = random.nextInt(1, Config.COUNT_CELL - 1);
+            x = random.nextInt(1, COUNT_CELL - 1);
+            y = random.nextInt(1, COUNT_CELL - 1);
         }
         food.setPosition(x, y);
     }
 
     void incrementScore(){
         scoreLabel.setText("Score: " + String.valueOf(++score));
+    }
+
+    void reset(){
+        System.out.println("reset");
+        isGameOver = false;
+        isReset = false;
+        score = 0;
+        scoreLabel.setText("Score: " + score);
+        snake.reset();
     }
 }
