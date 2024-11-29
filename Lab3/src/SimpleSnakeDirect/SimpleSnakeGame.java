@@ -86,7 +86,7 @@ public class SimpleSnakeGame {
                 }
 
                 try {
-                    Thread.sleep(Config.SHOW_DEALAY);
+                    Thread.sleep(Config.SHOW_DELAY);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public record Config() {
     static final String TITLE_OF_WINDOW = "The game Snake";
-    static final int SHOW_DEALAY = 200;
+    static final int SHOW_DELAY = 200;
 
     static final int LEFT = 37;
     static final int UP = 38;
