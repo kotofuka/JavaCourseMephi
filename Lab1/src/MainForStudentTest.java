@@ -13,19 +13,16 @@ import java.util.List;
 class MainForStudentTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
-    private final PrintStream originalErr = System.err;
 
     @BeforeEach
     public void setUpStreams(){
         System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
     }
 
     @Nested
     @DisplayName("Transfer Student tests:")
-    class transferStudentTest {
+    class TransferStudentTest {
 
         @Test
         @DisplayName("Test 1")
@@ -88,7 +85,7 @@ class MainForStudentTest {
     
     @Nested
     @DisplayName("Print Students tests:")
-    class printStudentsTest{
+    class PrintStudentsTest{
 
         @Test
         @DisplayName("Test 1")
@@ -156,7 +153,7 @@ class MainForStudentTest {
 
     @Nested
     @DisplayName("Print Student List tests:")
-    class printStudentListTest{
+    class PrintStudentListTest{
         @Test
         @DisplayName("Test 1")
         void transferStudentTest1() {
@@ -239,6 +236,5 @@ class MainForStudentTest {
     @AfterEach
     public void restoreStreams(){
         System.setOut(originalOut);
-        System.setErr(originalErr);
     }
 }

@@ -35,7 +35,7 @@ public class Student {
         return this.course;
     }
 
-    public boolean tryUpgradeCourse (){
+    public boolean tryUpgradeCourse () throws ArithmeticException{
         if (Arrays.stream(this.marks).sum() / this.marks.length >= MIN_SCORE){
             this.course++;
             return true;
