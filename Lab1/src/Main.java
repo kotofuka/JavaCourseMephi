@@ -16,11 +16,10 @@ public class Main {
         var student3 = new Student("Max", 37, 3, new int[]{2, 3, 4, 5, 5, 6, 6});
         var student4 = new Student("Michel", 46, 4, new int[]{4,5,6,7,7,4,2});
 
-        // создвем список студентов
-        List <Student> studentList = new ArrayList<Student>();
+        // создаем список студентов
 
         // заполняем список студентов
-        studentList.addAll(Arrays.asList(student0, student1, student2, student3, student4));
+        List<Student> studentList = new ArrayList<Student>(Arrays.asList(student0, student1, student2, student3, student4));
 
         // вызов метода "printStudents"
         System.out.printf("Список студентов %d курсе:\n", course);
@@ -40,7 +39,7 @@ public class Main {
             System.out.print(course == student.getCourse() ? student.getName() + " " : "");
 
         }
-        System.out.println();
+        System.out.print("\n");
     }
 
     public static List<Student> transferStudents(List<Student> students){
@@ -49,9 +48,9 @@ public class Main {
     }
 
     public static void printStudentList(List<Student> students){
-        System.out.println("Имя - курс");
+        System.out.print("Name - course\n");
         for (var student : students){
-            System.out.println(student.getName() + " - " + student.getCourse());
+            System.out.print(student.getName() + " - " + student.getCourse() + "\n");
         }
     }
 }

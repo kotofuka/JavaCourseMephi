@@ -21,6 +21,16 @@ public class Student {
         return this.name;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", group=" + group +
+                ", course=" + course +
+                ", marks=" + Arrays.toString(marks) +
+                '}';
+    }
+
     public int getCourse() {
         return this.course;
     }
