@@ -18,7 +18,7 @@ public class Main {
         // метод печатает пользователей в отсортированном по фамилии порядке
         printUsersOrderedLastName(users);
 
-        // метод печатает пользователей в отсортированном по фамилии порядке
+        // метод печатает пользователей в отсортированном по возрасту порядке
         printUsersOrderedAge(users);
 
         // метод печатает пользователей в отсортированном по возрасту порядке
@@ -41,19 +41,19 @@ public class Main {
 
     // метод для вывода в консоль пользователей в отсортированном по фамилии порядке
     public static void printUsersOrderedLastName(List<User> users){
-        System.out.println("\nСписок пользователей отсортированный по фамилии (id: Имя Фамилия (Возраст))");
+        System.out.print("\nСписок пользователей отсортированный по фамилии (id: Имя Фамилия (Возраст))\n");
         users.stream()
                 .sorted(Comparator.comparing(User::getLastName))
-                .forEach(x -> System.out.println(x.getInfo()));
+                .forEach(x -> System.out.print(x.getInfo() + "\n"));
 
     }
 
     // метод для вывода в консоль пользователей в отсортированном по возрасту порядке
     public static void printUsersOrderedAge(List<User> users){
-        System.out.println("\nСписок пользователей отсортированный по возрасту (id: Имя Фамилия (Возраст))");
+        System.out.print("\nСписок пользователей отсортированный по возрасту (id: Имя Фамилия (Возраст))\n");
         users.stream()
                 .sorted(Comparator.comparing(User::getAge))
-                .forEach(x -> System.out.println(x.getInfo()));
+                .forEach(x -> System.out.print(x.getInfo() + "\n"));
     }
 
     // метод определяет, что возраст всех пользователей в списке > someConst
