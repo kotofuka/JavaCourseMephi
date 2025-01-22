@@ -1,7 +1,6 @@
 package SimpleSnakeDirect;
 
 import java.awt.*;
-import java.util.LinkedList;
 
 public record Config() {
     static final String TITLE_OF_WINDOW = "The game Snake";
