@@ -16,37 +16,35 @@ public class Lab4Application {
 
         var beanUserService = app.getBean(UserService.class);
 
-        beanUserService.addNewUser(User.builder()
-                    .firstName("Oleg")
-                    .lastName("Ivanov")
-                    .role(Role.ADMIN)
-                .build());
-
-        beanUserService.addNewUser(User.builder()
-                .firstName("Maxim")
-                .lastName("Bobrov")
-                .role(Role.DEVELOPER)
-                .build());
-
-        beanUserService.addNewUser(User.builder()
-                .firstName("Vadim")
-                .lastName("Uhov")
-                .role(Role.SYSTEM_ANALYST)
-                .build());
-
-        beanUserService.addNewUser(User.builder()
-                .firstName("Maria")
-                .lastName("Glazkova")
-                .role(Role.TESTER)
-                .build());
-
-        beanUserService.addNewUser(User.builder()
-                .firstName("Eduard")
-                .lastName("Tihonov")
-                .role(Role.TEAM_LEAD)
-                .build());
-
-        System.out.println(beanUserService.findAllUsers());
+//        beanUserService.addNewUser(User.builder()
+//                    .firstName("Oleg")
+//                    .lastName("Ivanov")
+//                    .role(Role.ADMIN)
+//                .build());
+//
+//        beanUserService.addNewUser(User.builder()
+//                .firstName("Maxim")
+//                .lastName("Bobrov")
+//                .role(Role.DEVELOPER)
+//                .build());
+//
+//        beanUserService.addNewUser(User.builder()
+//                .firstName("Vadim")
+//                .lastName("Uhov")
+//                .role(Role.SYSTEM_ANALYST)
+//                .build());
+//
+//        beanUserService.addNewUser(User.builder()
+//                .firstName("Maria")
+//                .lastName("Glazkova")
+//                .role(Role.TESTER)
+//                .build());
+//
+//        beanUserService.addNewUser(User.builder()
+//                .firstName("Eduard")
+//                .lastName("Tihonov")
+//                .role(Role.TEAM_LEAD)
+//                .build());
     }
 
 }

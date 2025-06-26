@@ -34,9 +34,11 @@ public class UserController {
             response = userService.addNewUserByRequest(request);
         } catch (IllegalArgumentException e){}
         return response == null ?
-                ResponseEntity.ofNullable(UserServiceResponse.builder()
-                                .status(false)
-                        .build())
+                ResponseEntity
+                        .badRequest().body(
+                                UserServiceResponse.builder()
+                                        .status(false)
+                                        .build())
                 : ResponseEntity.ok(response);
     }
 }

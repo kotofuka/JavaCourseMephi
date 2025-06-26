@@ -14,12 +14,34 @@ public class InitiateUtils implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        userService.addNewUser(User.builder()
-//                .firstName("Oleg")
-//                .lastName("Ivanov")
-//                .role(Role.ADMIN)
-//                .build());
-//
-//        System.out.println(userService.findAllUsersByFirstName("Oleg"));
+        userService.addNewUser(User.builder()
+                    .firstName("Oleg")
+                    .lastName("Ivanov")
+                    .role(Role.ADMIN)
+                .build());
+
+        userService.addNewUser(User.builder()
+                .firstName("Maxim")
+                .lastName("Bobrov")
+                .role(Role.DEVELOPER)
+                .build());
+
+        userService.addNewUser(User.builder()
+                .firstName("Vadim")
+                .lastName("Uhov")
+                .role(Role.SYSTEM_ANALYST)
+                .build());
+
+        userService.addNewUser(User.builder()
+                .firstName("Maria")
+                .lastName("Glazkova")
+                .role(Role.TESTER)
+                .build());
+
+        userService.addNewUser(User.builder()
+                .firstName("Eduard")
+                .lastName("Tihonov")
+                .role(Role.TEAM_LEAD)
+                .build());
     }
 }
