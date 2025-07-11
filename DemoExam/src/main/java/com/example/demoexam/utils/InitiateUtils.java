@@ -116,5 +116,6 @@ public class InitiateUtils implements CommandLineRunner {
                 .age(17)
                 .country(Country.UNITED_STATES)
                 .build());
+
     }
 }

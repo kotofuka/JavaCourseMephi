@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="create project and complete file application, entity, repository">
+      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Lab4" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2zNaGrXUteIzjMFhQ9lRUWmZHVi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Lab4Application.executor&quot;: &quot;Run&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;24&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Spring Boot.DemoExamApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="DemoExam" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demoexam.DemoExamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab4Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="lab4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mephi.lab4.Lab4Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="move from main all files">
+      <option name="closed" value="true" />
+      <created>1750962727938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750962727938</updated>
+    </task>
+    <task id="LOCAL-00002" summary="move from main all files">
+      <option name="closed" value="true" />
+      <created>1750962793565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750962793565</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1750965027057</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750965027057</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="update README.md" />
+      <created>1751573895157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751573895157</updated>
+      <workItem from="1751573898070" duration="6000" />
+      <workItem from="1751638637220" duration="15000" />
+      <workItem from="1752175659360" duration="450000" />
+      <workItem from="1752176119168" duration="4123000" />
+      <workItem from="1752180575652" duration="1765000" />
+      <workItem from="1752231803327" duration="3879000" />
+    </task>
+    <task id="LOCAL-00004" summary="create project and complete file application, entity, repository">
+      <option name="closed" value="true" />
+      <created>1752182193332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752182193332</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Demo-exam" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="move from main all files" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="create project and complete file application, entity, repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="create project and complete file application, entity, repository" />
+  </component>
+</project>
