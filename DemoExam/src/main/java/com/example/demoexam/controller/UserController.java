@@ -47,8 +47,8 @@ public class UserController {
     }
 
     @GetMapping("/additional-info")
-    public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestBody CustomRequest request){
-        var users = userService.findAllUsersByAgeGreaterThanEqualOrderByFirstName(request.getAge());
+    public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestParam int age){
+        var users = userService.findAllUsersByAgeGreaterThanEqualOrderByFirstName(age);
 
         return !users.isEmpty()
                 ? ResponseEntity.ok(users)

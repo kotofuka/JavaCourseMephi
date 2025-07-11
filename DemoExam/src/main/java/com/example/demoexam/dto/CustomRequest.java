@@ -14,5 +14,6 @@ import java.io.Serializable;
 @Builder
 public class CustomRequest implements Serializable {
     // TODO: rebuild class for request in point 3 in the task
+    // todo: convert "age" to parameter
     private Integer age;
 }

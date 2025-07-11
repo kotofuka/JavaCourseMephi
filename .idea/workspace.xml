@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="complete task 1-2">
-      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" afterDir="false" />
+    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="the draft of task 3 (is already completing the task)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +141,7 @@
       <workItem from="1752176119168" duration="4123000" />
       <workItem from="1752180575652" duration="1765000" />
       <workItem from="1752231803327" duration="4365000" />
-      <workItem from="1752247943765" duration="1291000" />
+      <workItem from="1752247943765" duration="2049000" />
     </task>
     <task id="LOCAL-00004" summary="create project and complete file application, entity, repository">
       <option name="closed" value="true" />
@@ -161,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752235959647</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="the draft of task 3 (is already completing the task)">
+      <option name="closed" value="true" />
+      <created>1752249333153</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752249333153</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +201,7 @@
     <MESSAGE value="update README.md" />
     <MESSAGE value="create project and complete file application, entity, repository" />
     <MESSAGE value="complete task 1-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete task 1-2" />
+    <MESSAGE value="the draft of task 3 (is already completing the task)" />
+    <option name="LAST_COMMIT_MESSAGE" value="the draft of task 3 (is already completing the task)" />
   </component>
 </project>
