@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="create project and complete file application, entity, repository">
-      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceResponse.java" afterDir="false" />
+    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="complete task 1-2">
+      <change afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,8 @@
       <workItem from="1752175659360" duration="450000" />
       <workItem from="1752176119168" duration="4123000" />
       <workItem from="1752180575652" duration="1765000" />
-      <workItem from="1752231803327" duration="3879000" />
+      <workItem from="1752231803327" duration="4365000" />
+      <workItem from="1752247943765" duration="1291000" />
     </task>
     <task id="LOCAL-00004" summary="create project and complete file application, entity, repository">
       <option name="closed" value="true" />
@@ -153,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752182193332</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="complete task 1-2">
+      <option name="closed" value="true" />
+      <created>1752235959647</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752235959647</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +194,7 @@
     <MESSAGE value="move from main all files" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="create project and complete file application, entity, repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="create project and complete file application, entity, repository" />
+    <MESSAGE value="complete task 1-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete task 1-2" />
   </component>
 </project>

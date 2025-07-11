@@ -1,6 +1,7 @@
 package com.example.demoexam.controller;
 
 
+import com.example.demoexam.dto.CustomRequest;
 import com.example.demoexam.dto.UserDto;
 import com.example.demoexam.dto.UserServiceRequest;
 import com.example.demoexam.dto.UserServiceResponse;
@@ -45,6 +46,12 @@ public class UserController {
                 : ResponseEntity.ok(response);
     }
 
-//    @GetMapping("/additional-info")
-//    public ResponseEntity<List<UserDto>> findAllUsersB
+    @GetMapping("/additional-info")
+    public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestBody CustomRequest request){
+        var users = userService.findAllUsersByAgeGreaterThanEqualOrderByFirstName(request.getAge());
+
+        return !users.isEmpty()
+                ? ResponseEntity.ok(users)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }

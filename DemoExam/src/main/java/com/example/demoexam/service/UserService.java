@@ -40,6 +40,11 @@ public class UserService {
         return UserServiceResponse.builder()
                     .status(true)
                 .build();
+    }
 
+    public List<UserDto> findAllUsersByAgeGreaterThanEqualOrderByFirstName(Integer age) {
+        return userRepository
+                .findAllByAgeGreaterThanEqualOrderByFirstName(age)
+                .stream().map(UserDto::new).collect(Collectors.toList());
     }
 }
