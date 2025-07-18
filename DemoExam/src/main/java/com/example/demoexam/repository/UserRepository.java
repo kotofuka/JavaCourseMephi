@@ -8,5 +8,15 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    public List<User> findAllByAgeGreaterThanEqualOrderByFirstName(Integer age);
+//    Получить всех пользователей, возраст которых больше или равен "age"
+//    и упопорядочить с учетом регистра поля "firstName"
+    List<User> findByAgeGreaterThanEqualOrderByFirstNameAsc(Integer age);
+
+//    Просто получить всех пользователей, возраст которых больше или равен "age"
+//    (без изначального упорядочивания)
+    List<User> findByAgeGreaterThanEqual(Integer age);
+
+//    Получить список пользователей, возраст которых равен "age"
+    List<User> findAllByAge(Integer age);
+
 }

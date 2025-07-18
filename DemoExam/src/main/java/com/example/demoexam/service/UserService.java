@@ -42,9 +42,30 @@ public class UserService {
                 .build();
     }
 
-    public List<UserDto> findAllUsersByAgeGreaterThanEqualOrderByFirstName(Integer age) {
+//    С учетом регистра поля "firstName"
+    public List<UserDto> findAllByAgeGreaterThanEqualOrderByFirstNameAsc(Integer age) {
+
         return userRepository
-                .findAllByAgeGreaterThanEqualOrderByFirstName(age)
+                .findByAgeGreaterThanEqualOrderByFirstNameAsc(age)
                 .stream().map(UserDto::new).collect(Collectors.toList());
+    }
+
+//    Без учета регистра поля "firstName"
+    public List<UserDto> findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(Integer age) {
+//        без учета "age" = null
+//        return userRepository
+//                .findByAgeGreaterThanEqual(age)
+//                .stream().sorted(
+//                        (user1, user2) -> user1.getFirstName().compareToIgnoreCase(user2.getFirstName())
+//                ).map(UserDto::new).collect(Collectors.toList());
+
+//        с проверкой "age" = null?
+        var users = age == null
+                ? userRepository.findAllByAge(age)
+                : userRepository.findByAgeGreaterThanEqual(age);
+        return users
+                .stream().sorted(
+                        (user1, user2) -> user1.getFirstName().compareToIgnoreCase(user2.getFirstName())
+                ).map(UserDto::new).collect(Collectors.toList());
     }
 }

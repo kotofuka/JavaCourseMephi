@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="the draft of task 3 (is already completing the task)">
+    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="some fixes: now &quot;age&quot; is a parameter of query, don't exist in request body">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/CustomRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +144,11 @@
       <workItem from="1752176119168" duration="4123000" />
       <workItem from="1752180575652" duration="1765000" />
       <workItem from="1752231803327" duration="4365000" />
-      <workItem from="1752247943765" duration="2049000" />
+      <workItem from="1752247943765" duration="2429000" />
+      <workItem from="1752503291208" duration="4679000" />
+      <workItem from="1752766777476" duration="5560000" />
+      <workItem from="1752780079396" duration="662000" />
+      <workItem from="1752829361219" duration="1208000" />
     </task>
     <task id="LOCAL-00004" summary="create project and complete file application, entity, repository">
       <option name="closed" value="true" />
@@ -167,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752249333153</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="some fixes: now &quot;age&quot; is a parameter of query, don't exist in request body">
+      <option name="closed" value="true" />
+      <created>1752250382958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752250382958</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +217,7 @@
     <MESSAGE value="create project and complete file application, entity, repository" />
     <MESSAGE value="complete task 1-2" />
     <MESSAGE value="the draft of task 3 (is already completing the task)" />
-    <option name="LAST_COMMIT_MESSAGE" value="the draft of task 3 (is already completing the task)" />
+    <MESSAGE value="some fixes: now &quot;age&quot; is a parameter of query, don't exist in request body" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes: now &quot;age&quot; is a parameter of query, don't exist in request body" />
   </component>
 </project>

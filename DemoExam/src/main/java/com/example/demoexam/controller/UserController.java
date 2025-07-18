@@ -1,7 +1,6 @@
 package com.example.demoexam.controller;
 
 
-import com.example.demoexam.dto.CustomRequest;
 import com.example.demoexam.dto.UserDto;
 import com.example.demoexam.dto.UserServiceRequest;
 import com.example.demoexam.dto.UserServiceResponse;
@@ -47,11 +46,18 @@ public class UserController {
     }
 
     @GetMapping("/additional-info")
-    public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestParam int age){
-        var users = userService.findAllUsersByAgeGreaterThanEqualOrderByFirstName(age);
+    public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestParam(required = false) Integer age){
+        System.out.println("Age = " + age);
+
+//        с учетом регистра поля "firstName" при упорядочивании
+//        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAsc(age);
+
+//      без учета регистра поля "firstName" при упорядочивании
+        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(age);
+
 
         return !users.isEmpty()
                 ? ResponseEntity.ok(users)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                : ResponseEntity.ofNullable(users);
     }
 }
