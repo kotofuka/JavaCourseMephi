@@ -6,16 +6,19 @@ import com.example.demoexam.dto.UserServiceResponse;
 import com.example.demoexam.entity.Country;
 import com.example.demoexam.entity.User;
 import com.example.demoexam.repository.UserRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
+@Validated
 public class UserService {
     @Autowired
     private final UserRepository userRepository;
@@ -29,8 +32,7 @@ public class UserService {
         return userRepository.findAll().stream().map(UserDto::new).collect(Collectors.toList());
     }
 
-    public UserServiceResponse addNewUserByRequest(UserServiceRequest request) {
-        // TODO::make validation of request: "age" value should be > 0 or null if don't exist
+    public UserServiceResponse addNewUserByRequest(@Valid UserServiceRequest request) {
         addNewUser(User.builder()
                     .firstName(request.getFirstName())
                     .age(request.getAge())
@@ -38,7 +40,7 @@ public class UserService {
                 .build());
 
         return UserServiceResponse.builder()
-                    .status(true)
+                    .status("successfully added")
                 .build();
     }
 

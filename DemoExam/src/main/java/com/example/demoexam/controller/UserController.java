@@ -5,6 +5,8 @@ import com.example.demoexam.dto.UserDto;
 import com.example.demoexam.dto.UserServiceRequest;
 import com.example.demoexam.dto.UserServiceResponse;
 import com.example.demoexam.service.UserService;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,16 +32,21 @@ public class UserController {
 
     @PostMapping("/users")
     public ResponseEntity<UserServiceResponse> addNewUserByRequest(@RequestBody UserServiceRequest request){
+        // todo: нужно скорректировать валидацию поступаемых и выдаваемых данных, добавить (переделать) валидацию для enum
         UserServiceResponse response = null;
+
         try{
             response = userService.addNewUserByRequest(request);
-        } catch (IllegalArgumentException e){}
+            System.out.println(response);
+        } catch (ConstraintViolationException e){
+
+        }
 
         return response == null
                 ? ResponseEntity
                     .badRequest().body(
                         UserServiceResponse.builder()
-                                    .status(false)
+                                    .status("error")
                                 .build()
                     )
                 : ResponseEntity.ok(response);
@@ -50,10 +57,10 @@ public class UserController {
         System.out.println("Age = " + age);
 
 //        с учетом регистра поля "firstName" при упорядочивании
-//        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAsc(age);
+        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAsc(age);
 
 //      без учета регистра поля "firstName" при упорядочивании
-        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(age);
+//        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(age);
 
 
         return !users.isEmpty()

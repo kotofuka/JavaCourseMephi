@@ -120,28 +120,30 @@ public class InitiateUtils implements CommandLineRunner {
 
 
 //        !!! test of "null" param of age
-        userService.addNewUser(User.builder()
-                .firstName("alex")
-                .country(Country.UNITED_STATES)
-                .build());
 
-        userService.addNewUser(User.builder()
-                .firstName("barbara")
-                .age(null)
-                .country(Country.UNITED_STATES)
-                .build());
+//
+//        userService.addNewUser(User.builder()
+//                .firstName("alex")
+//                .country(Country.UNITED_STATES)
+//                .build());
+//
+//        userService.addNewUser(User.builder()
+//                .firstName("barbara")
+//                .age(null)
+//                .country(Country.UNITED_STATES)
+//                .build());
 
-        userService.addNewUser(User.builder()
-                .firstName("candal")
-                .age(-1)
-                .country(Country.UNITED_STATES)
-                .build());
-
-        userService.addNewUser(User.builder()
-                .firstName("dmitrii")
-                        .age(0)
-                .country(Country.UNITED_STATES)
-                .build());
+//        userService.addNewUser(User.builder()
+//                .firstName("candal")
+//                .age(-1)
+//                .country(Country.UNITED_STATES)
+//                .build());
+//
+//        userService.addNewUser(User.builder()
+//                .firstName("dmitrii")
+//                        .age(0)
+//                .country(Country.UNITED_STATES)
+//                .build());
 
         userService.addNewUser(User.builder()
                 .firstName("Eduard")

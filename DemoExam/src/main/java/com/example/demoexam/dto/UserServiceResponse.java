@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class UserServiceResponse {
-    private Boolean status;
+    private String status;
 }
