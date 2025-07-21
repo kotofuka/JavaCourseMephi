@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="fixed bugs, do complex solution">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="1a5f9e51-0864-40be-b9ff-5a224b43b3d2" name="Changes" comment="some fixes: start to validate input data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/dto/UserServiceResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/DemoExam/src/main/java/com/example/demoexam/utils/InitiateUtils.java" afterDir="false" />
     </list>
@@ -153,7 +151,8 @@
       <workItem from="1752780079396" duration="662000" />
       <workItem from="1752829361219" duration="1208000" />
       <workItem from="1752852024015" duration="828000" />
-      <workItem from="1753091416145" duration="7033000" />
+      <workItem from="1753091416145" duration="7793000" />
+      <workItem from="1753105749613" duration="7126000" />
     </task>
     <task id="LOCAL-00004" summary="create project and complete file application, entity, repository">
       <option name="closed" value="true" />
@@ -195,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752852121722</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="some fixes: start to validate input data">
+      <option name="closed" value="true" />
+      <created>1753103918004</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753103918005</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +239,7 @@
     <MESSAGE value="the draft of task 3 (is already completing the task)" />
     <MESSAGE value="some fixes: now &quot;age&quot; is a parameter of query, don't exist in request body" />
     <MESSAGE value="fixed bugs, do complex solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs, do complex solution" />
+    <MESSAGE value="some fixes: start to validate input data" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes: start to validate input data" />
   </component>
 </project>

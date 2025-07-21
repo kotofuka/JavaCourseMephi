@@ -6,7 +6,6 @@ import com.example.demoexam.dto.UserServiceRequest;
 import com.example.demoexam.dto.UserServiceResponse;
 import com.example.demoexam.service.UserService;
 import jakarta.validation.ConstraintViolationException;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,36 +31,29 @@ public class UserController {
 
     @PostMapping("/users")
     public ResponseEntity<UserServiceResponse> addNewUserByRequest(@RequestBody UserServiceRequest request){
-        // todo: нужно скорректировать валидацию поступаемых и выдаваемых данных, добавить (переделать) валидацию для enum
-        UserServiceResponse response = null;
-
         try{
-            response = userService.addNewUserByRequest(request);
-            System.out.println(response);
+            var response = userService.addNewUserByRequest(request);
+            return ResponseEntity.ok(response);
         } catch (ConstraintViolationException e){
-
-        }
-
-        return response == null
-                ? ResponseEntity
+            return ResponseEntity
                     .badRequest().body(
                         UserServiceResponse.builder()
-                                    .status("error")
+                                    .status("error -> " + e.getMessage().replace("addNewUserByRequest.request.", System.lineSeparator()))
                                 .build()
-                    )
-                : ResponseEntity.ok(response);
+            );
+        } catch (IllegalArgumentException e){
+            return ResponseEntity
+                    .badRequest().body(
+                            UserServiceResponse.builder()
+                                    .status("error -> country: " + "'" + request.getCountry() + "' не входит в enum 'Country'")
+                                    .build()
+                    );
+        }
     }
 
     @GetMapping("/additional-info")
     public ResponseEntity<List<UserDto>> findAllByAgeGreaterThanEqualOrderByFirstName(@RequestParam(required = false) Integer age){
-        System.out.println("Age = " + age);
-
-//        с учетом регистра поля "firstName" при упорядочивании
         var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAsc(age);
-
-//      без учета регистра поля "firstName" при упорядочивании
-//        var users = userService.findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(age);
-
 
         return !users.isEmpty()
                 ? ResponseEntity.ok(users)

@@ -33,6 +33,7 @@ public class UserService {
     }
 
     public UserServiceResponse addNewUserByRequest(@Valid UserServiceRequest request) {
+        System.out.println("Country request: " + Country.valueOf(request.getCountry()));
         addNewUser(User.builder()
                     .firstName(request.getFirstName())
                     .age(request.getAge())
@@ -40,34 +41,14 @@ public class UserService {
                 .build());
 
         return UserServiceResponse.builder()
-                    .status("successfully added")
+                    .status("Пользователь успешно добавлен")
                 .build();
     }
 
-//    С учетом регистра поля "firstName"
     public List<UserDto> findAllByAgeGreaterThanEqualOrderByFirstNameAsc(Integer age) {
 
         return userRepository
                 .findByAgeGreaterThanEqualOrderByFirstNameAsc(age)
                 .stream().map(UserDto::new).collect(Collectors.toList());
-    }
-
-//    Без учета регистра поля "firstName"
-    public List<UserDto> findAllByAgeGreaterThanEqualOrderByFirstNameAscIgnoreCase(Integer age) {
-//        без учета "age" = null
-//        return userRepository
-//                .findByAgeGreaterThanEqual(age)
-//                .stream().sorted(
-//                        (user1, user2) -> user1.getFirstName().compareToIgnoreCase(user2.getFirstName())
-//                ).map(UserDto::new).collect(Collectors.toList());
-
-//        с проверкой "age" = null?
-        var users = age == null
-                ? userRepository.findAllByAge(age)
-                : userRepository.findByAgeGreaterThanEqual(age);
-        return users
-                .stream().sorted(
-                        (user1, user2) -> user1.getFirstName().compareToIgnoreCase(user2.getFirstName())
-                ).map(UserDto::new).collect(Collectors.toList());
     }
 }

@@ -2,7 +2,6 @@ package com.example.demoexam.entity;
 
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
@@ -19,14 +18,14 @@ public class User {
     private Long id;
 
     @Pattern(regexp = "^[A-Z][a-z]*$",
-            message = "First name must start with an uppercase letter followed by lowercase letters")
-    @Column(name = "firstName")
+            message = "должно начинаться с заглавной буквы английской, за которой должны следовать строчные буквы")
+    @Column(name = "firstName", nullable = false)
     private String firstName;
 
     @Column(name = "age", nullable = false)
     private Integer age;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "country")
+    @Column(name = "country", nullable = false)
     private Country country;
 }
